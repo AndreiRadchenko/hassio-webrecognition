@@ -1,1 +1,2 @@
-
+ARG BUILD_ARCH
+FROM andriiradchenko/web_recognition:armv703
