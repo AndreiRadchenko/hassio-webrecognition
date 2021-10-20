@@ -4,7 +4,7 @@
   "panel_icon": "mdi:face-recognition",
   "slug": "webrecognition",
   "description": "Face recognition local web server",
-  "url": "https://github.com/AndreiRadchenko/webrecognition",
+  "url": "https://github.com/AndreiRadchenko/hassio-webrecognition",
   "startup": "application",
   "boot": "auto",
   "webui": "http://[HOST]:[PORT:5001]/",
