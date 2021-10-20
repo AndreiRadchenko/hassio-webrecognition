@@ -1,0 +1,42 @@
+{
+  "name": "WebRecognition",
+  "version": "1.0",
+  "panel_icon": "mdi:face-recognition",
+  "slug": "webrecognition",
+  "description": "Face recognition local web server",
+  "url": "https://github.com/AndreiRadchenko/webrecognition",
+  "startup": "application",
+  "boot": "auto",
+  "webui": "http://[HOST]:[PORT:5001]/",
+  "watchdog": "http://[HOST]:[PORT:5001]/",
+  "ingress": true,
+  "ingress_port": 5001,
+  "ingress_entry": "/",
+  "panel_admin": false,
+  "ports": {
+    "5001/tcp": 5001
+  },
+  "ports_description": {
+    "5001/tcp": "Web interface (Not required for Hass.io Ingress)"
+  },
+  "host_network": false,
+  "devices": [
+  ],
+  "usb": true,
+  "tmpfs": true,
+  "full_access": false,
+  "environment": {
+    "CONFIG_FILE": "/config/webrecognition.yml"
+  },
+  "options": {},
+  "schema": {},
+  "services": ["mqtt:need"],
+  "arch": [
+    "amd64",
+    "armv7"
+  ],
+  "map": [
+    "media:rw",
+    "config:rw"
+  ]
+}
