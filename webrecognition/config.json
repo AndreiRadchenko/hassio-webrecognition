@@ -36,7 +36,6 @@
     "armv7"
   ],
   "map": [
-    "media:rw",
-    "config:rw"
+    "examples:rw"
   ]
 }
