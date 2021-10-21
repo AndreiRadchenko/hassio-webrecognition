@@ -5,10 +5,9 @@
   "slug": "webrecognition",
   "description": "Face recognition local web server",
   "url": "https://github.com/AndreiRadchenko/hassio-webrecognition",
-  "advanced": true,
   "ingress": true,
   "ingress_port": 5001,
-  "init": false,
+  "init": true,
   "ports": {
     "5001/tcp": 5001
   },
@@ -19,7 +18,6 @@
   "ports_description": {
     "5001/tcp": "Web interface (Not required for Hass.io Ingress)"
   },
-  "webui": "http://[HOST]:[PORT:5001]",
   "boot": "auto",
   "environment": {
     "CONFIG_FILE": "/config/webrecognition.yml"
