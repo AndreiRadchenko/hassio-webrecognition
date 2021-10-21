@@ -7,7 +7,7 @@
   "url": "https://github.com/AndreiRadchenko/hassio-webrecognition",
   "advanced": true,
   "ingress": true,
-  "startup": "services",
+  "ingress_port": 5001,
   "init": false,
   "ports": {
     "5001/tcp": 5001
@@ -19,12 +19,8 @@
   "ports_description": {
     "5001/tcp": "Web interface (Not required for Hass.io Ingress)"
   },
-  "webui": "http://[HOST]:[PORT:3000]",
+  "webui": "http://[HOST]:[PORT:5001]",
   "boot": "auto",
-  "hassio_api": true,
-  "docker_api": true,
-  "host_network": true,
-  "full_access": true,
   "environment": {
     "CONFIG_FILE": "/config/webrecognition.yml"
   },
