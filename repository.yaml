@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
 name: Home Assistant Add-on: WebRecognition
 url: 'https://github.com/AndreiRadchenko/hassio-webrecognition'
-maintainer: Andrei Radchenko <d4100kx@gmail.com>
+maintainer: Andrei Radchenko <d4100kx@gmail.com> 
