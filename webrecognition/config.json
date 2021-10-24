@@ -11,31 +11,28 @@
   "watchdog": "http://[HOST]:[PORT:5001]/",
   "ingress": true,
   "ingress_port": 5001,
-  "ingress_entry": "/",
-  "panel_admin": false,
+  "panel_admin": true,
   "ports": {
     "5001/tcp": 5001
   },
   "ports_description": {
     "5001/tcp": "Web interface (Not required for Hass.io Ingress)"
   },
-  "host_network": false,
+  "map": [
+    "examples:rw",
+    "examples/data:rw"
+  ],
+  "host_network": true,
   "devices": [
   ],
-  "usb": true,
+  "usb": false,
   "tmpfs": true,
   "full_access": false,
-  "environment": {
-    "CONFIG_FILE": "/config/webrecognition.yml"
-  },
   "options": {},
   "schema": {},
   "services": ["mqtt:need"],
   "arch": [
     "amd64",
     "armv7"
-  ],
-  "map": [
-    "examples:rw"
   ]
 }
