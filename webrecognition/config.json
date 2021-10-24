@@ -22,11 +22,10 @@
   "devices": [
   ],
   "usb": false,
-  "tmpfs": true,
+  "tmpfs": false,
   "full_access": false,
   "options": {},
   "schema": {},
-  "services": ["mqtt:need"],
   "arch": [
     "amd64",
     "armv7"
