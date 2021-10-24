@@ -12,16 +12,13 @@
   "ingress": true,
   "ingress_port": 5001,
   "panel_admin": true,
+  "map": ["examples:rw", "examples/data:rw"],
   "ports": {
     "5001/tcp": 5001
   },
   "ports_description": {
     "5001/tcp": "Web interface (Not required for Hass.io Ingress)"
   },
-  "map": [
-    "examples:rw",
-    "examples/data:rw"
-  ],
   "host_network": true,
   "devices": [
   ],
