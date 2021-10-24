@@ -12,7 +12,7 @@
   "ingress": true,
   "ingress_port": 5001,
   "panel_admin": true,
-  "map": ["examples:rw", "examples/data:rw"],
+  "map": ["examples/data:rw"],
   "ports": {
     "5001/tcp": 5001
   },
