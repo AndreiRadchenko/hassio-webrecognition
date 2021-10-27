@@ -14,10 +14,8 @@
     "media:rw",
     "share:rw"
   ],
-  "webui": "http://[localhost]:[PORT:5001]/",
-  "watchdog": "http://[localhost]:[PORT:5001]/",
-  "ingress": true,
-  "ingress_port": 5001,
+  "webui": "http://localhost:5001/",
+  "watchdog": "http://localhost:5001/",
   "panel_admin": true,
   "ports": {
     "5001/tcp": 5001
