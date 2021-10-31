@@ -1,4 +1,4 @@
 ARG BUILD_ARCH
 FROM andriiradchenko/web_recognition:${BUILD_ARCH}
-VOLUME ["/root/face_recognition/examples"]
+VOLUME ["data:/root/face_recognition/examples"]
 EXPOSE 5001
