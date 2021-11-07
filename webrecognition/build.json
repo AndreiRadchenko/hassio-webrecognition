@@ -1,6 +1,0 @@
-{
-  "args":{
-    "volume":"face_data:/root/face_recognition/examples",
-    "name":"web_face"
-  }
-}
