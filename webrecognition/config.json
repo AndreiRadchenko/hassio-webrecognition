@@ -8,7 +8,7 @@
   "startup": "application",
   "boot": "auto",
   "panel_admin": true,
-  "map": ["share:rw"],
+  "map": ["config:rw"],
   "ports": {
     "5001/tcp": 5001
   },
