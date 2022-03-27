@@ -10,9 +10,12 @@ Watch on youtube:
 [![Watch on youtube](https://img.youtube.com/vi/LVS-DfC3EMw/0.jpg)](https://youtu.be/LVS-DfC3EMw)
 
 ## Installing
-In Hass.io, navigate to Supervisor > Add-on Store > Repositories and add
+In Hass.io, navigate to Supervisor > Add-on Store > Repositories and add 
+`HASSIO Add-on: Web Recognition` repositorie
 
     https://github.com/AndreiRadchenko/hassio-webrecognition
+    
+Install and start addon.    
   
 ## Video instruction
 
@@ -25,8 +28,8 @@ Watch on youtube:
 ## Local web server for realtime face recognition by http request or web interface. 
 
 Після встановлення аддону в веббраузері перейдіть за адресою [Home Assistant IP]:5001
-Відкриється сторінка "Samples page" на якій ви можете завантажити фото знайомих облич. Для більш швидкої обробки зображень 
-
+Відкриється сторінка "Samples page" на якій ви можете завантажити фото знайомих облич. Для більш швидкого розпізнавання
+я рекомендую використовувати зображення SD resolution (1280x720 pix) adn up to 60 kB size. Звичайно таке зображення дає SD потік камери.
 
 <img src="https://github.com/AndreiRadchenko/ESPHome/blob/main/gate_cover/images/edinger-gpio.jpeg" width="70%"></img> 
 
