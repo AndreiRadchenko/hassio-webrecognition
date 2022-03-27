@@ -31,7 +31,7 @@ Watch on youtube:
 Відкриється сторінка "Samples page" на якій ви можете завантажити фото знайомих облич. Для більш швидкого розпізнавання
 я рекомендую використовувати зображення SD resolution (1280x720 pix) adn up to 60 kB size. Звичайно таке зображення дає SD потік камери.
 
-<img src="https://github.com/AndreiRadchenko/ESPHome/blob/main/gate_cover/images/edinger-gpio.jpeg" width="70%"></img> 
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/sample_page.jpg" width="70%"></img> 
 
 Сервер дозволяє задати до 5 "знайомих" облич з іменами (ім'я одним словом, без пробілів). 
 
