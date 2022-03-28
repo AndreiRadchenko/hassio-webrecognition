@@ -59,5 +59,5 @@ In Hass.io, navigate to Supervisor > Add-on Store > Repositories and add
 Для того щоб позбутися цього обмеження, прошу підтримайте мене на ByMeACoffee чи PayPal, напишіть мені, і я поділюся інструкцією, як встановити сервер розпізнавання облич в HAOS що зберігає дані облич при перезавантаженні. Ваша підтримка буде дуже доречна мені і моїй родині в умовах війни в Україні. 
 Якщо проект зацікавить велику аудіторію, я продовжу роботу по інтегріції проекта в Home assistant, наприклад додам вивід результату в mqtt, чи створю сенсор розпізнавання.
 
-<a href="https://www.buymeacoffee.com/andriiradchenko" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/andriiradchenko" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>   <a href="https://www.paypal.com/donate/?hosted_button_id=QB42TMLKZ7KAE" target="_blank"><img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/paypal-donation.png" alt="Donate with PayPal" style="height: 60px !important;width: 250px !important;" ></a>
 
