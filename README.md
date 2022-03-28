@@ -16,14 +16,6 @@ In Hass.io, navigate to Supervisor > Add-on Store > Repositories and add
     https://github.com/AndreiRadchenko/hassio-webrecognition
     
 Файл образа важить біля 1 ГБ, тож для скачування може знадобитись 10-15 хвилин. Install and start addon.    
-  
-## Video instruction
-
-Коротке відео з субтитрами про задання облич для розпізнавання і тест роботи сервера. !ЗАПИСАТИ ВІДЕО
-
-Watch on youtube:
-
-[![Watch on youtube](https://img.youtube.com/vi/-kzQXVCUmVY/0.jpg)](https://youtu.be/-kzQXVCUmVY)
 
 ## Local web server for realtime face recognition by http request or web interface. 
 
@@ -49,8 +41,13 @@ Watch on youtube:
 
 На сторінці Test Page натисніть кнопку `Select` для вибору тестового фотопортрету
 
-<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/test-page.png" width="70%"></img> 
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/test-page.jpg" width="70%"></img> 
 
 Обравши фото, натисніть кнопку `Upload`
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/test_page.png" width="70%"></img>
+
+Якщо дотримуватись моїх рекомендацій щодо розміру зображень, то розпізнавання обличчя займає до 3 с на rpi 3 B+. Після завершення
+обробки сервер видасть json структуру що відобразиться браузером
+
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/json-return.png" width="50%"></img>
