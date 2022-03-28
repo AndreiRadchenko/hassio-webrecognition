@@ -50,4 +50,6 @@ In Hass.io, navigate to Supervisor > Add-on Store > Repositories and add
 Якщо дотримуватись моїх рекомендацій щодо розміру зображень, то розпізнавання обличчя займає до 3 с на rpi 3 B+. Після завершення
 обробки сервер видасть json структуру що відобразиться браузером
 
-<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/json-return.png" width="50%"></img>
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/json-return.png" width="40%"></img>
+
+Для того щоб продовжити тести натисніть стрілку назад в браузері.
