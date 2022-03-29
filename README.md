@@ -17,14 +17,14 @@ The image file is about 1 GB, so it may take 10-15 minutes to download. Install 
 
 ## Local web server for realtime face recognition by http request or web interface. 
 
-After add-on installation open the web browser and go to [Home Assistant IP]: 5001
+After add-on installation open the web browser and go to [Home Assistant IP]: 5001.
 A "Samples page" will open, and there you can upload photos of known faces. To select a photo, press `Select`. Enter a name in the adjacent field, in one word without spaces. For faster recognition I recommend using SD resolution images (1280x720 or 720x576 pix) and up to 60 kB size. Usually this image resolution gives the SD stream of the camera.
 The server allows you to specify up to 5 "known" faces with names.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/chose_foto_name.jpg" width="70%"></img> 
 
-Після додавання зображень знайомих облич і редагування імен натисніть кнопку `Upload` внизу сторінки. Це призведе до запуску скрипта,який 
-закодує обличчя в вигляді векторних масивів і запише ці масиви в файл. Процес кодування на rpi3 B+ може зайняти до 1 хв часу, в залежності від кількості облич і розміру фійлів зображень. Запуск скрипта кодування облич запускається також натисненням `Enter`.
+After adding images of known faces and editing names, click the `Upload` button at the bottom of the page. This will run a script that
+encodes faces as vector arrays and writes these arrays to a file. The encoding process on rpi3 B + can take up to 1 minute, depending on the number of faces and the size of the image files. The face encoding script also started by pressing `Enter`.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/upload.jpg" width="70%"></img> 
 
