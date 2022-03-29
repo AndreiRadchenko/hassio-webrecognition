@@ -78,6 +78,16 @@ Node-Red Flow            |  Description
 Для роботи flow вам необхідно встановити в Node-Red [node-red-contrib-image-tools](https://flows.nodered.org/node/node-red-contrib-image-tools) і 
 [node-red-contrib-image-output](https://flows.nodered.org/node/node-red-contrib-image-output). 
 Для цього відкрийте Node-Red -> Settings (Sandwich button) -> Manage palette. Перейдіть на вкладку Install і в полі пошуку введіть "image-tools". 
-Встановіть цей пакет, потім так само встановіть пакет "image-output"
+Встановіть цей `node`, потім так само встановіть `node` "image-output"
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/install-image-tool.jpg" width="49%"></img> <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-contrib-image-output.jpg" width="49%"></img>
+
+Відредагуйте node "Doorbell button" у відповідності з сенсором що буде активувати автоматизацію.
+Для налаштування з якої камери потрібно робити знімок, відредагуйте node "API". Для більш швидкої обробки зображень потрібно брати SD відео потік.
+
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-API-cam-thumbnail.jpg" width="100%"></img>
+
+Якщо сервер розпізнавання webrecognition запущений на тому ж сервері що і Node-Red, node "http request" можна залишити без змін. Інакше потрібно
+відредагувати IP адресу сервера webrecognition в полі URL вузла "http request" : [webrecognition_IP]:5001/test
+
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-send-http.jpg" width="100%"></img>
