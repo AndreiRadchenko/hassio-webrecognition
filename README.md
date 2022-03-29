@@ -59,12 +59,12 @@ If a large audience will interested to the project, I will continue to work on i
 
 <a href="https://www.buymeacoffee.com/andriiradchenko" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>   <a href="https://www.paypal.com/donate/?hosted_button_id=QB42TMLKZ7KAE" target="_blank"><img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/paypal-donation.png" alt="Donate with PayPal" style="height: 60px !important;width: 250px !important;" ></a>
 
-## Взаємодія серверу розпізнавання облич webrecognition з Home Assistant. 
+## Face recognition server interaction with Home Assistant.
 
-Взаємодія серверу розпізнавання облич з Home Assistant реалізована в Node-Red. Ви можете імпортувати наведене мною flow в Node-Red. Flow "Cam Dorbell"
-у відповідь на подію натиснення кнопки дзвінка робить знімок з камери дзвінка і надсилає його через `html request node` серверу webrecognition. 
-Після обробки сервером, результат розпізнавання у вигляді JSON об'єкта надходить в `html request node` і в залежності від його вмісту `Switch node` 
-відкриває чи не відкриває хвіртку і встановлює сенсори input_boolean. Ці сенсори я використовую в Alexa rutine для оголошення голосовим помічником хто саме подзвонив в дзвінок.
+Face recognition server interaction with Home Assistant is implemented in Node-Red. You can import my flow to Node-Red. 
+In response to the event of pressing the doorbell button,  "Cam Dorbell" flow takes a picture from the doorbell camera and sends it via `html request node` to the webrecognition server.
+After the server processing,  result of recognition in the form of JSON object arrives in `html request node`. And depending on its contents` Switch node`
+opens or does not open the wicket lock and set input_boolean sensors. I use these sensors in the Alexa routine to announce by voice assistant who exactly ring the doorbell.
 
 
 Node-Red Flow            |  Description
@@ -73,10 +73,10 @@ Node-Red Flow            |  Description
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-flow.jpg" width="100%"></img> 
 
-Для роботи flow вам необхідно встановити в Node-Red [node-red-contrib-image-tools](https://flows.nodered.org/node/node-red-contrib-image-tools) і 
-[node-red-contrib-image-output](https://flows.nodered.org/node/node-red-contrib-image-output). 
-Для цього відкрийте Node-Red -> Settings (Sandwich button) -> Manage palette. Перейдіть на вкладку Install і в полі пошуку введіть "image-tools". 
-Встановіть цей `node`, потім так само встановіть `node` "image-output"
+You need to install in Node-Red [node-red-contrib-image-tools] (https://flows.nodered.org/node/node-red-contrib-image-tools) and
+[node-red-contrib-image-output] (https://flows.nodered.org/node/node-red-contrib-image-output) nodes.
+To do this, open Node-Red -> Settings (Sandwich button) -> Manage palette. Go to the Install tab and enter "image-tools" in the search field.
+Install this node, then install  "image-output" node.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/install-image-tool.jpg" width="49%"></img> <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-contrib-image-output.jpg" width="49%"></img>
 
