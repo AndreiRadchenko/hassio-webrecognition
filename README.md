@@ -13,14 +13,13 @@ In Hass.io, navigate to Supervisor > Add-on Store > Repositories and add
 
     https://github.com/AndreiRadchenko/hassio-webrecognition
     
-Файл образа важить біля 1 ГБ, тож для скачування може знадобитись 10-15 хвилин. Install and start addon.    
+The image file is about 1 GB, so it may take 10-15 minutes to download. Install and start addon.
 
 ## Local web server for realtime face recognition by http request or web interface. 
 
-Після встановлення аддону в веббраузері перейдіть за адресою [Home Assistant IP]:5001
-Відкриється сторінка "Samples page" на якій ви можете завантажити фото знайомих облич. Для вибору фото натисніть `Select`. В сусідньому полі введіть ім'я, одним словом без пробілів. Для більш швидкого розпізнавання
-я рекомендую використовувати зображення SD resolution (1280x720 or 720x576 pix) and up to 60 kB size. Звичайно таке зображення дає SD потік камери.
-Сервер дозволяє задати до 5 "знайомих" облич з іменами. 
+After add-on installation open the web browser and go to [Home Assistant IP]: 5001
+A "Samples page" will open, and there you can upload photos of known faces. To select a photo, press `Select`. Enter a name in the adjacent field, in one word without spaces. For faster recognition I recommend using SD resolution images (1280x720 or 720x576 pix) and up to 60 kB size. Usually this image resolution gives the SD stream of the camera.
+The server allows you to specify up to 5 "known" faces with names.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/chose_foto_name.jpg" width="70%"></img> 
 
