@@ -1,9 +1,9 @@
 # hassio-webrecognition: add-on repository
-Hassio addon for local face recognition web server створений на основі проекту https://github.com/ageitgey/face_recognition. На даний час є докер образи для платформ armv7 amd64. Перевірено працює на raspberry 3B+, raspberry 4B (Home Assistant Operating System.), intel i3 linux Mint (Home Assistant Supervised and Home Assistant Operating System VM). У мене особисто сервер працював в HAOS RPI 4B і використовувався для розпізнавання облич камерою дзвінка на хвіртці. Було також налаштовано сповіщення через алексу хто саме подзвонив в дзвінок і автоматичне відкриття замка хвіртки в разі знайомого обличчя. Взаємодія сервера розпізнавання з home assistant реалізована в Node-Red. Flow наведено в кінці статті.
+Hassio addon for local face recognition web server based on the https://github.com/ageitgey/face_recognition progect. Currently there are docker images for armv7 and amd64 platforms. Tested on raspberry 3B +, raspberry 4B (Home Assistant Operating System.), Intel i3 linux Mint (Home Assistant Supervised and Home Assistant Operating System VM). In my setup, server worked on HAOS RPI 4B and was used for face recognition with a doorbell camera on the wicket. There was a Alexa notification, that anounse who the ring doorbell, and the automatic wicket lock opening in case of a known face. The recognition server interaction with the home assistant is implemented in Node-Red. Flow is given at the end of the article.
 
 ## Video illustration
 
-Коротке відео з субтитрами про дзвінок з розпізнаванням облич на НА.
+Short video with subtitles about the doorbell with face recognition on Home Assistant.
 
 [![Watch on youtube](https://img.youtube.com/vi/LVS-DfC3EMw/0.jpg)](https://youtu.be/LVS-DfC3EMw)
 
