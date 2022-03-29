@@ -64,7 +64,7 @@ If a large audience will interested to the project, I will continue to work on i
 Face recognition server interaction with Home Assistant is implemented in Node-Red. You can import my flow to Node-Red. 
 In response to the event of pressing the doorbell button,  "Cam Dorbell" flow takes a picture from the doorbell camera and sends it via `html request node` to the webrecognition server.
 After the server processing,  result of recognition in the form of JSON object arrives in `html request node`. And depending on its contents` Switch node`
-opens or does not open the wicket lock and set input_boolean sensors. I use these sensors in the Alexa routine to announce by voice assistant who exactly ring the doorbell.
+open or does not open the wicket lock and set input_boolean sensors. I use these sensors in the Alexa routine to announce by voice assistant who exactly ring the doorbell.
 
 
 Node-Red Flow            |  Description
@@ -73,26 +73,26 @@ Node-Red Flow            |  Description
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-flow.jpg" width="100%"></img> 
 
-You need to install in Node-Red [node-red-contrib-image-tools] (https://flows.nodered.org/node/node-red-contrib-image-tools) and
-[node-red-contrib-image-output] (https://flows.nodered.org/node/node-red-contrib-image-output) nodes.
+You need to install in Node-Red [node-red-contrib-image-tools](https://flows.nodered.org/node/node-red-contrib-image-tools) and
+[node-red-contrib-image-output](https://flows.nodered.org/node/node-red-contrib-image-output) nodes.
 To do this, open Node-Red -> Settings (Sandwich button) -> Manage palette. Go to the Install tab and enter "image-tools" in the search field.
 Install this node, then install  "image-output" node.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/install-image-tool.jpg" width="49%"></img> <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-contrib-image-output.jpg" width="49%"></img>
 
-Відредагуйте node "Doorbell button" у відповідності з сенсором що буде активувати автоматизацію.
-Для налаштування з якої камери потрібно робити знімок, відредагуйте node "API". Для більш швидкої обробки зображень потрібно брати SD відео потік.
+Edit the node "Doorbell button" according to the sensor that will activate the automation.
+Edit the node "API" to configure which camera you want to capture. For faster image processing you need to take SD video stream.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-API-cam-thumbnail.jpg" width="100%"></img>
 
-Якщо сервер розпізнавання webrecognition запущений на тому ж сервері що і Node-Red, node "http request" можна залишити без змін. Інакше потрібно
-відредагувати IP адресу сервера webrecognition в полі URL вузла "http request" : [webrecognition_IP]:5001/test
+If the webrecognition  server and Node-Red are running on the same machine,  the node "http request" can be left unchanged. Otherwise it is necessary
+to edit the IP address of the webrecognition server in the URL field of the  "http request" node: [webrecognition_IP]:5001/test
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-send-http.jpg" width="100%"></img>
 
-Якщо сервер webrecognition повертає JSON об'єкт з пустим полем "faces_list", node "Switch" активує свій перший вихід, що просто виводить 
-JSON об'єкт в Debug. Якщо поле "faces_list" не пусте, значить перед дверима стоїть хтось із знайомим обличчям і "Switch" передає управління на другий
-вихід. До нього підключений node що відчиняє хвіртку. Node "Switch" також активує вихід що містить ім'я впізнаної людини, до якого підключені nodes 
-що активують відповідні `input_boolean`
+If the webrecognition server returns a JSON object with an empty field "faces_list", node "Switch" activates its first output, which simply outputs
+JSON object to Debug stream. If the "faces_list" field is not empty, then someone with a known face is standing in front of the door and "Switch" passes control to second
+output. A node that opens the wicket lock is connected to it. Node "Switch" also activates the output containing the name of the recognized person to which connected the nodes that 
+activates  corresponding `input_boolean`
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-switch.jpg" width="100%"></img>
