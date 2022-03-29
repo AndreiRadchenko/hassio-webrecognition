@@ -74,3 +74,6 @@ Node-Red Flow            |  Description
 [Cam_Doorbell.json](https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/flows.json) | Flow for interaction with Home Assistant  
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-flow.jpg" width="100%"></img> 
+
+Для роботи flow вам необхідно встановити в Node-Red [node-red-contrib-image-tools](https://flows.nodered.org/node/node-red-contrib-image-tools) і 
+[node-red-contrib-image-output](https://flows.nodered.org/node/node-red-contrib-image-output)
