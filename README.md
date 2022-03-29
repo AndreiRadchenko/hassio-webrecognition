@@ -56,8 +56,22 @@ In Hass.io, navigate to Supervisor > Add-on Store > Repositories and add
 ## hassio-webrecognition: add-on restriction
 
 Додаток має одне обмеження - фотографії облич і файл з закодованими данними облич не зберігаються після перезавантаження додатка чи Home Assistant.
-Для того щоб позбутися цього обмеження, прошу підтримайте мене на ByMeACoffee чи PayPal, напишіть мені, і я поділюся інструкцією, як встановити сервер розпізнавання облич в HAOS що зберігає дані облич при перезавантаженні. Ваша підтримка буде дуже доречна мені і моїй родині в умовах війни в Україні. 
+Для того щоб позбутися цього обмеження, прошу підтримайте мене на ByMeACoffee чи PayPal, напишіть мені, і я поділюся інструкцією, як встановити сервер розпізнавання облич в HAOS що зберігає дані облич при перезавантаженні. Ваша підтримка дуже потрібна мені і моїй родині в умовах війни в Україні. 
 Якщо проект зацікавить велику аудіторію, я продовжу роботу по інтегріції проекта в Home assistant, наприклад додам вивід результату в mqtt, чи створю сенсор розпізнавання.
 
 <a href="https://www.buymeacoffee.com/andriiradchenko" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>   <a href="https://www.paypal.com/donate/?hosted_button_id=QB42TMLKZ7KAE" target="_blank"><img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/paypal-donation.png" alt="Donate with PayPal" style="height: 60px !important;width: 250px !important;" ></a>
 
+## Взаємодія серверу розпізнавання облич webrecognition з Home Assistant за допомогою Node-Red. 
+
+Взаємодія серверу розпізнавання облич з Home Assistant реалізована в Node-Red. Ви можете імпортувати наведене мною flow в Node-Red. Flow "Cam Dorbell"
+у відповідь на подію натиснення кнопки дзвінка робить знімок з камери дзвінка і надсилає його через `html request node` серверу webrecognition. 
+Після обробки сервером, результат розпізнавання у вигляді JSON об'єкта надходить в `html request node` і в залежності від його вмісту `Switch node` 
+відкриває чи не відкриває хвіртку і встановлює сенсори input_boolean. Ці сенсори я використовую в Alexa rutine для оголошення голосовим помічником хто саме подзвонив в дзвінок.
+
+## ESPHome config file
+
+Node-Red Flow            |  Description
+-------------------------|-------------------------
+[Cam_Doorbell.json](https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/flows.json) | Flow for interaction with Home Assistant  
+
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-flow.jpg" width="70%"></img> 
