@@ -28,28 +28,28 @@ encodes faces as vector arrays and writes these arrays to a file. The encoding p
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/upload.jpg" width="70%"></img> 
 
-Після завершення роботи скрипту кодування відобразиться сторінка Completed. На ній натисніть кнопу `Return to the main page`.
+When the encoding script is finish, the Completed page will be displayed. Click the `Return to the main page` button.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/completed-page.png" width="70%"></img> 
 
-Для перевірки розпізнавання облич, натисніть на кнопку `Taste Page` вгорі сторінки задавання знайомих облич
+For the face recognition test, click on the `Test Page` button at the top of the Samples page.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/sample_page.jpg" width="70%"></img> 
 
-На сторінці Test Page натисніть кнопку `Select` для вибору тестового фотопортрету
+On the Test Page, click the `Select` button to select a test portrait.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/test-page.jpg" width="70%"></img> 
 
-Обравши фото, натисніть кнопку `Upload`
+After selecting a photo, click the `Upload` button.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/test_page.png" width="70%"></img>
 
-Якщо дотримуватись моїх рекомендацій щодо розміру зображень, то розпізнавання обличчя займає до 3 с на rpi 3 B+. Після завершення
-обробки сервер видасть json структуру що відобразиться браузером
+If you follow my image size recommendations, face recognition takes up to 3 seconds at rpi 3 B +. After the processing  completion
+server will return a json structure to be displayed by the browser.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/json-return.png" width="40%"></img>
 
-Для того щоб продовжити тести натисніть стрілку назад в браузері.
+To continue the tests, click the back arrow in the browser..
 
 ## hassio-webrecognition: add-on restriction
 
