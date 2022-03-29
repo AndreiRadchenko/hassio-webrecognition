@@ -76,4 +76,8 @@ Node-Red Flow            |  Description
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-flow.jpg" width="100%"></img> 
 
 Для роботи flow вам необхідно встановити в Node-Red [node-red-contrib-image-tools](https://flows.nodered.org/node/node-red-contrib-image-tools) і 
-[node-red-contrib-image-output](https://flows.nodered.org/node/node-red-contrib-image-output)
+[node-red-contrib-image-output](https://flows.nodered.org/node/node-red-contrib-image-output). 
+Для цього відкрийте Node-Red -> Settings (Sandwich button) -> Manage palette. Перейдіть на вкладку Install і в полі пошуку введіть "image-tools". 
+Встановіть цей пакет, потім так само встановіть пакет "image-output"
+
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/install-image-tool.jpg" width="49%"></img> <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-contrib-image-output.jpg" width="49%"></img>
