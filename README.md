@@ -54,7 +54,7 @@ To continue the tests, click the back arrow in the browser..
 ## hassio-webrecognition: add-on restriction
 
 The add-on has one limitation - photos of faces and the file with encoded face data are not saved after restarting the add-on or Home Assistant.
-To get rid of this limitation, please support me on ByMeACoffee or PayPal, [email me and I will share instructions](d4100kx@gmail.com) on how to install a face recognition server in HAOS that stores face data after rebooting. I and my family really need your support during the war in Ukraine.
+To get rid of this limitation, please support me on ByMeACoffee or PayPal, <a href=mailto:d4100kx@gmail.com>email me and I will share instructions</a> on how to install a face recognition server in HAOS that stores face data after rebooting. I and my family really need your support during the war in Ukraine.
 If a large audience will interested to the project, I will continue to work on integrating the project into the Home assistant, for example, I will add the output to mqtt, or create a recognition sensor.
 
 <a href="https://www.buymeacoffee.com/andriiradchenko" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>   <a href="https://www.paypal.com/donate/?hosted_button_id=QB42TMLKZ7KAE" target="_blank"><img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/paypal-donation.png" alt="Donate with PayPal" style="height: 60px !important;width: 250px !important;" ></a>
