@@ -21,33 +21,33 @@ After add-on installation open the web browser and go to [Home Assistant IP]: 50
 A "Samples page" will open, and there you can upload photos of known faces. To select a photo, press `Select`. Enter a name in the adjacent field, in one word without spaces. For faster recognition I recommend using SD resolution images (1280x720 or 720x576 pix) and up to 60 kB size. Usually this image resolution gives the SD stream of the camera.
 The server allows you to specify up to 5 "known" faces with names.
 
-<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/chose_foto_name.jpg" width="70%"></img> 
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/chose_foto_name.jpg" width="100%"></img> 
 
 After adding images of known faces and editing names, click the `Upload` button at the bottom of the page. This will run a script that
 encodes faces as vector arrays and writes these arrays to a file. The encoding process on rpi3 B + can take up to 1 minute, depending on the number of faces and the size of the image files. The face encoding script also started by pressing `Enter`.
 
-<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/upload.jpg" width="70%"></img> 
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/upload.jpg" width="100%"></img> 
 
 When the encoding script is finish, the Completed page will be displayed. Click the `Return to the main page` button.
 
-<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/completed-page.png" width="70%"></img> 
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/completed-page.png" width="100%"></img> 
 
 For the face recognition test, click on the `Test Page` button at the top of the Samples page.
 
-<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/sample_page.jpg" width="70%"></img> 
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/sample_page.jpg" width="100%"></img> 
 
 On the Test Page, click the `Select` button to select a test portrait.
 
-<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/test-page.jpg" width="70%"></img> 
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/test-page.jpg" width="100%"></img> 
 
 After selecting a photo, click the `Upload` button.
 
-<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/test_page.png" width="70%"></img>
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/test_page.png" width="100%"></img>
 
 If you follow my image size recommendations, face recognition takes up to 3 seconds at rpi 3 B +. After the processing  completion
 server will return a json structure to be displayed by the browser.
 
-<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/json-return.png" width="40%"></img>
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/json-return.png" width="60%"></img>
 
 To continue the tests, click the back arrow in the browser..
 
