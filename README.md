@@ -91,3 +91,10 @@ Node-Red Flow            |  Description
 відредагувати IP адресу сервера webrecognition в полі URL вузла "http request" : [webrecognition_IP]:5001/test
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-send-http.jpg" width="100%"></img>
+
+Якщо сервер webrecognition повертає JSON об'єкт з пустим полем "faces_list", node "Switch" активує свій перший вихід, що просто виводить 
+JSON об'єкт в Debug. Якщо поле "faces_list" не пусте, значить перед дверима стоїть хтось із знайомим обличчям і "Switch" передає управління на другий
+вихід. До нього підключений node що відчиняє хвіртку. Node "Switch" також активує вихід що містить ім'я впізноної людини, до якого підключені nodes 
+що активують відповідні `input_boolean`
+
+<img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/node-red-switch.jpg" width="100%"></img>
