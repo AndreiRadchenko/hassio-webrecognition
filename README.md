@@ -1,5 +1,5 @@
 # hassio-webrecognition: add-on repository
-Hassio addon for local face recognition web server based on the https://github.com/ageitgey/face_recognition progect. Currently there are docker images for armv7 and amd64 platforms. Tested on raspberry 3B +, raspberry 4B (Home Assistant Operating System.), Intel i3 linux Mint (Home Assistant Supervised and Home Assistant Operating System VM). In my setup, server worked on HAOS RPI 4B and was used for face recognition with a doorbell camera on the wicket. There was a Alexa notification, that anounse who the ring doorbell, and the automatic wicket lock opening in case of a known face. The recognition server interaction with the home assistant is implemented in Node-Red. Flow is given at the end of the article.
+Hassio addon for local face recognition web server based on the https://github.com/ageitgey/face_recognition progect. Currently there are docker images for armv7, aarch64 and amd64 platforms. Tested on raspberry 3B +, raspberry 4B (Home Assistant Operating System.), Intel i3 linux Mint (Home Assistant Supervised and Home Assistant Operating System VM). In my setup, server worked on HAOS RPI 4B and was used for face recognition with a doorbell camera on the wicket. There was a Alexa notification, that anounse who the ring doorbell, and the automatic wicket lock opening in case of a known face. The recognition server interaction with the home assistant is implemented in Node-Red. Flow is given at the end of the article.
 
 ## Video illustration
 
@@ -18,7 +18,7 @@ The image file is about 1 GB, so it may take 10-15 minutes to download. Install 
 ## Local web server for realtime face recognition by http request or web interface. 
 
 After add-on installation open the web browser and go to [Home Assistant IP]: 5001.
-A "Samples page" will open, and there you can upload photos of known faces. To select a photo, press `Select`. Enter a name in the adjacent field, in one word without spaces. For faster recognition I recommend using SD resolution images (1280x720 or 720x576 pix) and up to 60 kB size. Usually this image resolution gives the SD stream of the camera.
+A "Samples page" will open, and there you can upload photos of known faces. To select a photo, press `Select`. Enter a name in the adjacent field, in one word without spaces. If you don't use all 5 photos, just delete name and leave field empty. For faster recognition I recommend using SD resolution images (1280x720 or 720x576 pix) and up to 60 kB size. Usually this image resolution gives the SD stream of the camera.
 The server allows you to specify up to 5 "known" faces with names.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/chose_foto_name.jpg" width="100%"></img> 
@@ -44,7 +44,7 @@ After selecting a photo, click the `Upload` button.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/test_page.png" width="100%"></img>
 
-If you follow my image size recommendations, face recognition takes up to 3 seconds at rpi 3 B +. After the processing  completion
+If you follow my image size recommendations, face recognition takes up to 10 seconds at rpi 3B+ and up to 3 seconds at rpi 4B. After the processing  completion
 server will return a json structure to be displayed by the browser.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/json-return.png" width="60%"></img>
