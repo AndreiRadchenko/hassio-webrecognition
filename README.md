@@ -15,6 +15,12 @@ In Hass.io, navigate to Supervisor > Add-on Store > Repositories and add
     
 The image file is about 1 GB, so it may take 10-15 minutes to download. Install and start addon.
 
+If you have dedicated server with docker and with amd64 architecture, you can install webrecognition server by cli command:
+
+```cli
+docker run --restart always -d --name=web_recognition -p 5001:5001 andriiradchenko/web_recognition:amd64
+```
+
 ## Local web server for realtime face recognition by http request or web interface. 
 
 After add-on installation open the web browser and go to [Home Assistant IP]: 5001.
