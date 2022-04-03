@@ -27,5 +27,5 @@
     "armv7",
     "aarch64"
   ],
-  "image": "andriiradchenko/web_recognition:{arch}"
+  "image": "andriiradchenko/{arch}-web_recognition"
 }
