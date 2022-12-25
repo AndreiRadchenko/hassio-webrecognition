@@ -1,5 +1,5 @@
 # hassio-webrecognition: add-on repository
-Hassio addon for local face recognition web server based on the https://github.com/ageitgey/face_recognition progect. Currently there are docker images for armv7, aarch64 and amd64 platforms. Tested on raspberry 3B +, raspberry 4B (Home Assistant Operating System.), Intel i3 linux Mint (Home Assistant Supervised and Home Assistant Operating System VM). In my setup, server worked on HAOS RPI 4B and was used for face recognition with a doorbell camera on the wicket. There was a Alexa notification, that anounse who the ring doorbell, and the automatic wicket lock opening in case of a known face. The recognition server interaction with the home assistant is implemented in Node-Red. Flow is given at the end of the article.
+Hassio addon for local face recognition web server based on the https://github.com/ageitgey/face_recognition progect. Currently there are docker images for armv7, aarch64 and amd64 platforms. Tested on raspberry 3B +, raspberry 4B (Home Assistant Operating System.), Intel i3 linux Mint (Home Assistant Supervised and Home Assistant Operating System VM). In my setup, server worked on HAOS RPI 4B and used for face recognition with a doorbell camera on the wicket. There is a Alexa notification, that anounse who the ring doorbell, and the automatic wicket lock open in case of a known face. The recognition server interactions with the home assistant implemented in Node-Red. Flow is given at the end of the article.
 
 ## Video illustration
 
@@ -24,7 +24,7 @@ docker run --restart always -d --name=web_recognition -p 5001:5001 andriiradchen
 ## Local web server for realtime face recognition by http request or web interface. 
 
 After add-on installation open the web browser and go to [Home Assistant IP]: 5001.
-A "Samples page" will open, and there you can upload photos of known faces. To select a photo, press `Select`. Enter a name in the adjacent field, in one word without spaces. If you don't use all 5 photos, just delete name and leave field empty. For faster recognition I recommend using SD resolution images (1280x720 or 720x576 pix) and up to 60 kB size. Usually this image resolution gives the SD stream of the camera.
+A "Samples page" will open, and there you can upload photos of known faces. To select a photo, press `Select`. Enter a name in the adjacent field, in one word without spaces. If you don't use all 5 photos, just delete name and leave field empty. For faster recognition I recommend using SD resolution images (1280x720 or 720x576 pix) and up to 60 kB size. Usually this image resolution is given by the SD stream of the camera.
 The server allows you to specify up to 5 "known" faces with names.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/chose_foto_name.jpg" width="100%"></img> 
@@ -34,7 +34,7 @@ encodes faces as vector arrays and writes these arrays to a file. The encoding p
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/upload.jpg" width="100%"></img> 
 
-When the encoding script is finish, the Completed page will be displayed. Click the `Return to the main page` button.
+When the encoding script ends, the Completed page will display. Click the `Return to the main page` button.
 
 <img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/completed-page.png" width="100%"></img> 
 
@@ -61,7 +61,7 @@ To continue the tests, click the back arrow in the browser..
 
 The add-on has one limitation - photos of faces and the file with encoded face data are not saved after restarting the add-on or Home Assistant.
 To get rid of this limitation, please support me on ByMeACoffee or PayPal, <a href=mailto:d4100kx@gmail.com>email me and I will share instructions</a> on how to install a face recognition server in HAOS that stores face data after rebooting. I'm and my family really need your support during the war in Ukraine.
-If a large audience will interested to the project, I will continue to work on integrating the project into the Home assistant, for example, I will add the output to mqtt, or create a recognition sensor.
+If a large audience will be interested in the project, I will continue to work on integrating the project into the Home assistant, for example, I will add the output to mqtt, or create a recognition sensor.
 
 <a href="https://www.buymeacoffee.com/andriiradchenko" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>   <a href="https://www.paypal.com/donate/?hosted_button_id=QB42TMLKZ7KAE" target="_blank"><img src="https://github.com/AndreiRadchenko/hassio-webrecognition/blob/main/img/paypal-donation.png" alt="Donate with PayPal" style="height: 60px !important;width: 250px !important;" ></a>
 
